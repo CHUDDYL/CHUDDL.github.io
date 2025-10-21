@@ -37,32 +37,27 @@ header p {
 
 /* Section Title Divider */
 .section-title {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;                 /* space between text and lines */
   color: #0077b6;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 60px 0 40px;
 }
 
+/* the left/right lines */
 .section-title::before,
 .section-title::after {
   content: "";
-  flex: 1;
+  display: block;
+  flex: 1 1 0;               /* grow to fill available space */
+  min-width: 40px;           /* ensure a visible minimum on small screens */
   height: 2px;
-  background: #0077b6;
-  margin: 0 15px;
-}
-
-.section-title::before {
-  left: 0;
-}
-
-.section-title::after {
-  right: 0;
+  background: #0077b6 !important; /* ensure color is visible if something else overrides */
 }
 
 /* Layout for Skills */
