@@ -1,52 +1,51 @@
-/* General Styles */
+/* General */
 body {
   font-family: 'Open Sans', sans-serif;
   background: #fff;
   color: #333;
   margin: 0;
-  padding: 0;
   line-height: 1.6;
+  text-align: center;
 }
 
 header {
   background: #0077b6;
   color: white;
-  text-align: center;
   padding: 40px 20px;
 }
 
 header h1 {
-  margin-bottom: 10px;
+  margin: 0;
   font-size: 2.2rem;
 }
 
 header p {
+  margin-top: 10px;
   font-size: 1.1rem;
 }
 
-.container {
-  width: 85%;
-  margin: 0 auto;
-}
-
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   max-width: 900px;
   margin: auto;
 }
 
-/* Section Title Divider */
+/* Section Title with blue lines & 15% side margins */
 .section-title {
   text-align: center;
   margin: 60px 0 40px;
+  overflow: hidden; /* keeps lines neatly contained */
 }
 
 .section-title span {
   position: relative;
+  display: inline-block;
   padding: 0 16px;
   color: #0077b6;
-  font-weight:700;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #fff; /* keeps the text area clean between lines */
 }
 
 .section-title span::before,
@@ -54,57 +53,74 @@ header p {
   content: "";
   position: absolute;
   top: 50%;
-  width: 1000px;           /* very wide line, clipped by overflow hidden of container */
+  width: 70vw;               /* total line width, adjustable */
   height: 2px;
   background: #0077b6;
 }
 
-.section-title span::before { left: -1010px; } /* pushes left */
-.section-title span::after  { right: -1010px; } /* pushes right */
+/* 15% side margin: lines stop before page edge */
+.section-title span::before {
+  right: 100%;
+  margin-right: 15vw;        /* white space on left side */
+}
 
-/* Layout for Skills */
-.skills-grid {
+.section-title span::after {
+  left: 100%;
+  margin-left: 15vw;         /* white space on right side */
+}
+
+/* Centered text */
+.section p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Project Boxes */
+.project {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* Skills Boxes */
+.skills-boxes {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.skills-grid div {
-  flex: 1 1 30%;
+.skill-box {
   background: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  height: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Projects & Lists */
-.project, .education-entry, .work-entry {
-  background: #f8f9fa;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-ul {
-  margin-left: 20px;
-}
-
-a {
+.skill-box h3 {
   color: #0077b6;
-  text-decoration: none;
+  margin-bottom: 10px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
+/* Button */
 .btn {
   display: inline-block;
   background: #0077b6;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
@@ -115,16 +131,33 @@ a:hover {
   background: #005f99;
 }
 
+/* Links */
+a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   background: #0077b6;
   color: white;
-  text-align: center;
   padding: 15px;
   margin-top: 50px;
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
+/* Responsive */
+@media (max-width: 800px) {
+  .skills-boxes {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-box {
+    width: 80%;
+    height: auto;
   }
 }
