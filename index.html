@@ -1,105 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis Lorimer | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <nav>
-      <h1>Your Name</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container header-container">
+      <h1>Lewis Lorimer</h1>
+      <p>BSc (Hons) Computer Science Student | University of Dundee</p>
+    </div>
   </header>
 
-  <section id="home" class="intro">
-    <div class="container">
-      <h2>Hello, I’m <span>Your Name</span></h2>
-      <p>
-        I’m a passionate developer with a focus on building user-friendly, efficient, and creative software solutions.
-        My career goal is to work on projects that make a real difference through technology.
-      </p>
-    </div>
+  <!-- Profile -->
+  <section id="profile" class="section">
+    <h2 class="section-title">Profile</h2>
+    <p>
+      Motivated second-year BSc (Hons) Computer Science student at the University of Dundee with hands-on experience in Python, Java, and C.
+      Skilled in software development, problem-solving, and collaborative teamwork through academic projects and client-based work experience in IT.
+      Strong communication, adaptability, and time management skills developed from customer-facing roles.
+      Seeking a junior or entry-level software development opportunity to apply programming knowledge and gain experience working in the desired industry.
+    </p>
   </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>Task Manager App</h3>
-        <p>A web application for organizing daily tasks efficiently.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>My Role:</strong> Full-stack developer</p>
-        <p><strong>Challenges:</strong> Implemented responsive UI and optimized local storage data handling.</p>
-        <a href="#" target="_blank">View on GitHub</a>
+  <!-- Key Skills -->
+  <section id="key-skills" class="section">
+    <h2 class="section-title">Key Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <h3>🗣 Communication</h3>
+        <p>Developed through client interactions during FA work experience, including gathering feedback and presenting deliverables.</p>
       </div>
-
-      <div class="project">
-        <h3>Weather Dashboard</h3>
-        <p>Displays real-time weather information using an external API.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JS (OpenWeather API)</p>
-        <p><strong>My Role:</strong> API integration and design</p>
-        <a href="#" target="_blank">View on GitHub</a>
+      <div>
+        <h3>🤝 Teamwork</h3>
+        <p>Enhanced through collaboration in group projects and customer service roles requiring coordination and shared responsibilities.</p>
       </div>
-
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>This site — a showcase of my work, skills, and experiences.</p>
-        <p><strong>Technologies:</strong> HTML, CSS</p>
-        <a href="#" target="_blank">View on GitHub</a>
+      <div>
+        <h3>⌚ Time Management</h3>
+        <p>Strengthened by balancing academic workload and part-time employment, demonstrating reliability and organization.</p>
       </div>
     </div>
   </section>
 
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
+  <!-- Technical Skills -->
+  <section id="technical-skills" class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <p><strong>Programming Languages:</strong> Python, Java, C, HTML, CSS (basic)</p>
+    <p><strong>Software Tools:</strong> Git/GitHub, Visual Studio Code, BlueJ, Notepad++</p>
+  </section>
 
-      <h3>Technical Skills</h3>
-      <ul class="skills-list">
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python, C#, Java</li>
-        <li>React, Node.js</li>
-        <li>SQL, Git, GitHub</li>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Coursework & Projects</h2>
+
+    <div class="project">
+      <h3>Website Development – Foundation Apprenticeship Project (SHMU, Aberdeen)</h3>
+      <ul>
+        <li>Designed and built a website based on client specifications.</li>
+        <li>Gathered requirements, implemented features, and delivered a functional solution.</li>
+        <li>Delivered full documentation including wireframes, requirements, and test results.</li>
       </ul>
+    </div>
 
-      <h3>Transferable Skills</h3>
-      <p><strong>Teamwork:</strong> Collaborated with a team of 4 to deliver a group software project using Agile methods.</p>
-      <p><strong>Communication:</strong> Presented technical findings clearly to non-technical audiences.</p>
+    <div class="project">
+      <h3>University Coursework Projects – University of Dundee</h3>
+      <ul>
+        <li>Developed programming solutions in Python, Java, and C for various coursework modules.</li>
+        <li>Applied algorithmic problem-solving and OOP principles.</li>
+        <li>Tested and debugged code to ensure robust performance.</li>
+      </ul>
     </div>
   </section>
 
-  <section id="cv">
-    <div class="container">
-      <h2>Download My CV</h2>
-      <a href="cv.pdf" download class="btn">Download CV (PDF)</a>
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-entry">
+      <h3>University of Dundee — Dundee, Scotland (2024–2028)</h3>
+      <p>BSc (Hons) Computer Science</p>
+      <ul>
+        <li>Completed Year 1 with all modules passed.</li>
+        <li>Modules include: Software Development, Unix Systems, Front End Development, Embedded Systems, and Networking.</li>
+      </ul>
+    </div>
+
+    <div class="education-entry">
+      <h3>Portlethen Academy — Aberdeenshire, Scotland (2018–2024)</h3>
+      <ul>
+        <li>Advanced Higher: Physics (C), Computing Science (D)</li>
+        <li>Scottish Higher: Applications of Maths (A), Politics (C), Maths (A), Computing (A), Physics (A), English (B)</li>
+        <li>Foundation Apprenticeship (Level 6) — IT: Software Development</li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact & Profiles</h2>
-      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
-        <a href="https://stackoverflow.com/users/yourid" target="_blank">Stack Overflow</a>
-      </p>
+  <!-- Work Experience -->
+  <section id="experience" class="section">
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="work-entry">
+      <h3>Foundation Apprenticeship (SHMU, Aberdeen)</h3>
+      <p>Engaged in client-based website development work. Developed project planning, requirement gathering, and problem-solving skills in a software context.</p>
     </div>
+
+    <div class="work-entry">
+      <h3>McDonald's DT — Dundee</h3>
+      <p>Worked in a fast-paced environment focusing on teamwork, quality, and efficiency. Completed overnight shifts demonstrating adaptability and attention to detail.</p>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="section">
+    <h2 class="section-title">Achievements</h2>
+    <p>Received Portlethen Academy Certificate for outstanding effort in: Advanced Higher Physics, Advanced Higher Computing, Higher Applications of Maths, National 5 Computing Science, and National 5 Physics.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:lewislorimer2@gmail.com">lewislorimer2@gmail.com</a></p>
+    <p>Phone: +44 7305 018772</p>
+    <p>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </p>
+    <a href="cv.pdf" download class="btn">Download CV (PDF)</a>
   </section>
 
   <footer>
-    <p>© 2025 Your Name. All Rights Reserved.</p>
+    <p>© 2025 Lewis Lorimer | Designed & Developed by Lewis Lorimer</p>
   </footer>
 </body>
 </html>
