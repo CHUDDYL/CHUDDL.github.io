@@ -187,6 +187,25 @@ p {
   }
 }
 
+/* 2 rows × 3 columns layout for Tools & Platforms */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(2, auto);   /* 2 even rows */
+  gap: 15px 20px;                        /* vertical & horizontal spacing */
+  justify-items: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Adjust box size for grid layout */
+.tools-grid .small-skill-box {
+  width: 200px;
+  padding: 12px 20px;
+  min-width: unset;
+}
+
 /* ---------------------------
    BUTTONS
 ---------------------------- */
@@ -249,5 +268,17 @@ footer {
 
   p {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .tools-grid {
+    grid-template-columns: 1fr; /* stack boxes vertically on small screens */
   }
 }
