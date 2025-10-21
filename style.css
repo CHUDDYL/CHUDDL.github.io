@@ -137,6 +137,57 @@ p {
 }
 
 /* ---------------------------
+   SMALL TECHNICAL SKILL BOXES
+---------------------------- */
+.subheading {
+  color: #0077b6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.small-skill-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.small-skill-box {
+  background: #f8f9fa;
+  color: #0077b6;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Lift effect on hover */
+.small-skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .small-skill-box {
+    min-width: 90px;
+    padding: 10px 16px;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------------------------
    BUTTONS
 ---------------------------- */
 .btn {
